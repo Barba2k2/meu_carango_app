@@ -1,12 +1,19 @@
 import 'package:go_router/go_router.dart';
 
+import 'src/core/features/onboarding/presentation/pages/onboarding_page.dart';
+import 'src/core/features/splash/presentation/pages/splash_page.dart';
+
 final router = GoRouter(
-  initialLocation: '/onboarding',
+  initialLocation: '/',
   routes: [
-    // GoRoute(
-    //   path: '/onboarding',
-    //   builder: (context, state) => const OnboardingPage(),
-    // ),
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const SplashScreen(),
+    ),
+    GoRoute(
+      path: '/onboarding',
+      builder: (context, state) => const OnboardingPage(),
+    ),
     // GoRoute(
     //   path: '/auth',
     //   builder: (context, state) => const AuthBasePage(),
