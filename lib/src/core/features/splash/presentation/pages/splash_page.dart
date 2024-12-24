@@ -1,5 +1,6 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -31,10 +32,11 @@ class _SplashScreenState extends State<SplashScreen> {
         height: double.infinity,
         color: Colors.deepPurple,
         child: Center(
-          child: Image.asset(
-            AppImages.logoDark,
+          child: SvgPicture.asset(
+            AppImage.logoDark,
             width: 130,
             height: 130,
+            package: AppImage.packageName,
           ),
         ),
       ),
