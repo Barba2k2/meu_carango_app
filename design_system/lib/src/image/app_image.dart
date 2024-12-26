@@ -4,10 +4,10 @@ class AppImage {
   // Logo
   static const String logoDark = 'assets/logo/dark_logo.svg';
   static const String logoLight = 'assets/logo/light_logo.svg';
-  static const String logoText = 'assets/logo/text-logo.svg';
+  static const String logoText = 'assets/logo/text_logo.svg';
 
   // Onboarding
-  static const String onboarding1 = 'assets/onboarding/onboarding1.svg';
-  static const String onboarding2 = 'assets/onboarding/onboarding2.svg';
-  static const String onboarding3 = 'assets/onboarding/onboarding3.svg';
+  static const String onboarding1 = 'assets/onboarding/on-boarding-image-01.svg';
+  static const String onboarding2 = 'assets/onboarding/on-boarding-image-02.svg';
+  static const String onboarding3 = 'assets/onboarding/on-boarding-image-03.svg';
 }
