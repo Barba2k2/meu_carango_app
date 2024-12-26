@@ -6,6 +6,10 @@ import '../../design_system.dart';
 class AppTheme {
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.whiteColor,
+    appBarTheme: const AppBarTheme(
+      color: Colors.transparent,
+      elevation: 0,
+    ),
     textTheme: TextTheme(
       // Display
       displayLarge: GoogleFonts.rubik(
@@ -55,6 +59,10 @@ class AppTheme {
 
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: AppColors.whiteColor,
+    appBarTheme: const AppBarTheme(
+      color: Colors.transparent,
+      elevation: 0,
+    ),
     textTheme: TextTheme(
       // Display
       displayLarge: GoogleFonts.rubik(
@@ -78,6 +86,23 @@ class AppTheme {
         fontSize: 32,
       ),
 
+      // Subhead
+      labelLarge: GoogleFonts.nunito(
+        fontWeight: FontWeight.bold,
+        color: AppColors.whiteColor,
+        fontSize: 18,
+      ),
+      labelMedium: GoogleFonts.nunito(
+        fontWeight: FontWeight.bold,
+        color: AppColors.whiteColor,
+        fontSize: 16,
+      ),
+      labelSmall: GoogleFonts.nunito(
+        fontWeight: FontWeight.bold,
+        color: AppColors.whiteColor,
+        fontSize: 14,
+      ),
+
       // Title
       titleLarge: GoogleFonts.rubik(
         fontSize: 28,
@@ -85,7 +110,9 @@ class AppTheme {
       titleMedium: GoogleFonts.rubik(
         fontSize: 24,
       ),
-      titleSmall: GoogleFonts.rubik(
+      titleSmall: GoogleFonts.mulish(
+        color: AppColors.primaryColor,
+        fontWeight: FontWeight.bold,
         fontSize: 20,
       ),
 
