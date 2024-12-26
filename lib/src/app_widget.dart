@@ -1,3 +1,4 @@
+import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
 import '../routes.dart';
@@ -10,7 +11,7 @@ class MeuCarangoApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Adote um Pet',
-      // theme: AppTheme.theme,
+      theme: AppTheme.darkTheme,
       routerConfig: router,
     );
   }
