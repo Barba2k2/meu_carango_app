@@ -4,6 +4,7 @@ class AppImage {
   // Logo
   static const String logoDark = 'assets/logo/dark_logo.svg';
   static const String logoLight = 'assets/logo/light_logo.svg';
+  static const String logoText = 'assets/logo/text-logo.svg';
 
   // Onboarding
   static const String onboarding1 = 'assets/onboarding/onboarding1.svg';
