@@ -6,7 +6,7 @@ class PrimaryButtonDs extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
   final Color backgroundColor;
-  final Color foregroundColor;
+  final Color? foregroundColor;
   final double height;
   final double width;
   final IconData? icon;
@@ -29,30 +29,30 @@ class PrimaryButtonDs extends StatelessWidget {
     final theme = Theme.of(context);
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 12),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
         fixedSize: Size(width, height),
         backgroundColor: backgroundColor,
-        foregroundColor: foregroundColor,
+        foregroundColor: foregroundColor ?? Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius ?? 8),
         ),
       ),
       onPressed: onPressed,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Center(
-            child: Text(
-              title,
-              style: theme.textTheme.labelMedium,
-            ),
+          const Spacer(),
+          Text(
+            title,
+            style: theme.textTheme.labelMedium,
           ),
-          Positioned(
-            right: 24,
-            child: Icon(
+          const Spacer(),
+          if (icon != null)
+            Icon(
               icon,
               size: 24,
+              color: foregroundColor ?? Colors.white,
             ),
-          )
         ],
       ),
     );
