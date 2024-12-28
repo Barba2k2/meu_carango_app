@@ -54,11 +54,20 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDarkMode = theme.brightness == Brightness.dark;
+    final platformBrightness = MediaQuery.platformBrightnessOf(context);
+
+    // Debug prints
+    log('Platform brightness: $platformBrightness');
+    log('Theme brightness: ${theme.brightness}');
+
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: isDarkMode ? AppColors.darkBgColor : AppColors.whiteBgColor,
         title: Center(
           child: SvgPicture.asset(
-            AppImage.logoText,
+            isDarkMode ? AppImage.logoTextDark : AppImage.logoText,
             height: 20,
             width: 150,
             package: AppImage.packageName,
@@ -66,7 +75,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
         ),
       ),
       body: Container(
-        color: AppColors.whiteBgColor,
+        color: isDarkMode ? AppColors.darkBgColor : AppColors.whiteBgColor,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Column(
