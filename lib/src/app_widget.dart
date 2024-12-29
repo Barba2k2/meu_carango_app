@@ -12,13 +12,10 @@ class MeuCarangoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ThemeController>(
       builder: (context, themeController, _) {
-        final window = View.of(context).platformDispatcher;
-        final brightness = window.platformBrightness;
-
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           title: 'Meu Carango',
-          themeMode: brightness == Brightness.light ? ThemeMode.light : ThemeMode.dark,
+          themeMode: themeController.themeMode,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           routerConfig: router,
