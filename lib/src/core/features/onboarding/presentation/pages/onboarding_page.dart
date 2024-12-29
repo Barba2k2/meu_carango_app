@@ -4,7 +4,9 @@ import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../theme/controller/theme_controller.dart';
 import '../data/onboarding_data.dart';
 import '../widget/onboarding_widget.dart';
 
@@ -43,9 +45,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           height: 12,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color: index == _currentPage
-                ? AppColors.primaryColor
-                : AppColors.primaryColor.withOpacity(0.2),
+            color: index == _currentPage ? AppColors.primaryColor : AppColors.greyColor,
           ),
         ),
       ),
@@ -54,13 +54,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final isDarkMode = theme.brightness == Brightness.dark;
-    final platformBrightness = MediaQuery.platformBrightnessOf(context);
-
-    // Debug prints
-    log('Platform brightness: $platformBrightness');
-    log('Theme brightness: ${theme.brightness}');
+    final themeController = Provider.of<ThemeController>(context);
+    final isDarkMode = themeController.isDarkMode;
 
     return Scaffold(
       appBar: AppBar(
