@@ -2,7 +2,9 @@ import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:provider/provider.dart';
 
+import '../../../../theme/controller/theme_controller.dart';
 import '../data/onboarding_data.dart';
 
 class OnboardingWidget extends StatelessWidget {
@@ -18,13 +20,15 @@ class OnboardingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double imageHeight = currentIndex == 2 ? 380 : 214;
+    final themeController = Provider.of<ThemeController>(context);
+    final isDarkMode = themeController.isDarkMode;
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SvgPicture.asset(
-          data.image,
+          isDarkMode ? data.darkImage : data.lightImage,
           width: 330,
           height: imageHeight,
           package: AppImage.packageName,
