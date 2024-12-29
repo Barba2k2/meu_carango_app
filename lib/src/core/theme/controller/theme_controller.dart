@@ -5,7 +5,15 @@ class ThemeController extends ChangeNotifier {
 
   ThemeMode get themeMode => _themeMode;
 
-  bool get isDarkMode => _themeMode == ThemeMode.dark;
+  bool get isDarkMode {
+    if (_themeMode == ThemeMode.system) {
+      // Pega o tema do sistema
+      final window = WidgetsBinding.instance.window;
+      final brightness = window.platformBrightness;
+      return brightness == Brightness.dark;
+    }
+    return _themeMode == ThemeMode.dark;
+  }
 
   void toggleTheme(bool isOn) {
     _themeMode = isOn ? ThemeMode.dark : ThemeMode.light;
