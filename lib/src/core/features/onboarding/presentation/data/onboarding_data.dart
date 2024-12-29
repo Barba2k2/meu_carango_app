@@ -1,12 +1,14 @@
 import 'package:design_system/design_system.dart';
 
 class OnboardingData {
-  final String image;
+  final String lightImage;
+  final String darkImage;
   final String title;
   final String description;
 
   const OnboardingData({
-    required this.image,
+    required this.lightImage,
+    required this.darkImage,
     required this.title,
     required this.description,
   });
@@ -14,19 +16,22 @@ class OnboardingData {
 
 final List<OnboardingData> onboardingPages = [
   const OnboardingData(
-    image: AppImage.onboarding1,
+    lightImage: AppImage.onboarding1,
+    darkImage: AppImage.onboardingBlack1,
     title: 'Organização descomplicada',
     description:
         'Seja bem-vindo a Meu Carango, o aplicativo parceiro para organizar seus veículos.',
   ),
   const OnboardingData(
-    image: AppImage.onboarding2,
+    lightImage: AppImage.onboarding2,
+    darkImage: AppImage.onboardingBlack2,
     title: 'Controle despesas e manutenções',
     description:
         'Cadastre despesas, abastecimentos, receitas e manutenções. Tudo na palma da sua mão.',
   ),
   const OnboardingData(
-    image: AppImage.onboarding3,
+    lightImage: AppImage.onboarding3,
+    darkImage: AppImage.onboardingBlack3,
     title: 'Fique despreocupado',
     description:
         'Nós calculamos o consumo médio de seu veículo na ponta do lápis, traremos relatórios importantes sobre suas finanças e também te notificamos de manutenções a serem realizadas.',
