@@ -21,3 +21,5 @@ flutter:
   assets:
     - assets/onboarding/
     - assets/logo/
+    - assets/icons/
+    - assets/login/
