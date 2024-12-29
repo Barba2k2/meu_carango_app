@@ -4,6 +4,7 @@ import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../theme/controller/theme_controller.dart';
@@ -30,7 +31,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       );
     } else {
       log('onboarding completed');
-      // context.go('/auth/welcome');
+      context.go('/auth/login');
     }
   }
 
