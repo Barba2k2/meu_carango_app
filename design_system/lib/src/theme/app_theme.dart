@@ -67,23 +67,29 @@ class AppTheme {
       // Display
       displayLarge: GoogleFonts.rubik(
         fontSize: 64,
+        color: AppColors.whiteColor,
       ),
       displayMedium: GoogleFonts.rubik(
         fontSize: 48,
+        color: AppColors.whiteColor,
       ),
       displaySmall: GoogleFonts.rubik(
         fontSize: 32,
+        color: AppColors.whiteColor,
       ),
 
       // Headline
       headlineLarge: GoogleFonts.rubik(
         fontSize: 40,
+        color: AppColors.whiteColor,
       ),
       headlineMedium: GoogleFonts.rubik(
         fontSize: 36,
+        color: AppColors.whiteColor,
       ),
       headlineSmall: GoogleFonts.rubik(
         fontSize: 32,
+        color: AppColors.whiteColor,
       ),
 
       // Subhead
@@ -119,12 +125,15 @@ class AppTheme {
       // Body
       bodyLarge: GoogleFonts.rubik(
         fontSize: 16,
+        color: AppColors.whiteColor,
       ),
       bodyMedium: GoogleFonts.rubik(
         fontSize: 14,
+        color: AppColors.whiteColor,
       ),
       bodySmall: GoogleFonts.rubik(
         fontSize: 12,
+        color: AppColors.whiteColor,
       ),
     ),
   );
