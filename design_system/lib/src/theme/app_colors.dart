@@ -33,4 +33,12 @@ class AppColors {
 
   // Custom Colors
   static const Color greyColor = Color(0xFF474747);
+
+  // Input Colors
+  static const Color inputColorLight = Color(0xFFF8F8F9);
+  static const Color inputColorDark = Color(0xFF2D2D2D);
+
+  // Button Colors
+  static const Color loginWithGoogleButtonBgLight = Color(0xFFF8F8F9);
+  static const Color loginWithGoogleButtonBgDark = Color(0xFF2D2D2D);
 }
