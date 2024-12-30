@@ -55,40 +55,39 @@ class _TextInputDsState extends State<TextInputDs> {
     return SizedBox(
       height: widget.height,
       width: widget.width,
-      child: Material(
-        borderRadius: BorderRadius.circular(100),
-        child: TextFormField(
-          autovalidateMode: widget.autovalidateMode,
-          keyboardType: widget.textInputType,
-          obscureText: _isObscure,
-          controller: widget.controller,
-          validator: widget.validator,
-          onChanged: widget.onChanged,
-          decoration: InputDecoration(
-            suffixIcon: widget.isPassword
-                ? IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _isObscure = !_isObscure;
-                      });
-                    },
-                    icon: Icon(
-                      _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,
-                    ),
-                  )
-                : null,
-            labelText: widget.label,
-            labelStyle: widget.labelStyle ?? theme.textTheme.bodyLarge,
-            hintText: widget.label,
-            hintStyle: widget.labelStyle ?? theme.textTheme.bodyLarge,
-            filled: widget.isFilled,
-            fillColor: widget.darkMode ? AppColors.darkBgColor : AppColors.whiteColor,
-            border: OutlineInputBorder(
-              borderSide: BorderSide.none,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            prefixIcon: widget.prefixIcon,
+      child: TextFormField(
+        autovalidateMode: widget.autovalidateMode,
+        keyboardType: widget.textInputType,
+        obscureText: _isObscure,
+        controller: widget.controller,
+        validator: widget.validator,
+        onChanged: widget.onChanged,
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.all(16),
+          suffixIcon: widget.isPassword
+              ? IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _isObscure = !_isObscure;
+                    });
+                  },
+                  icon: Icon(
+                    _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                    color: widget.darkMode ? AppColors.whiteColor : AppColors.blackColor,
+                  ),
+                )
+              : null,
+          labelText: widget.label,
+          labelStyle: widget.labelStyle ?? theme.textTheme.bodyLarge,
+          hintText: widget.label,
+          hintStyle: widget.labelStyle ?? theme.textTheme.bodyLarge,
+          filled: widget.isFilled,
+          fillColor: widget.darkMode ? AppColors.inputColorDark : AppColors.inputColorLight,
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(100),
           ),
+          prefixIcon: widget.prefixIcon,
         ),
       ),
     );
