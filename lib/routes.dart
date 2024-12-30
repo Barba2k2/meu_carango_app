@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 
 import 'src/core/features/login/features/presentation/login_screen.dart';
 import 'src/core/features/onboarding/presentation/pages/onboarding_page.dart';
+import 'src/core/features/register/features/presentation/register_screen.dart';
 import 'src/core/features/splash/presentation/pages/splash_page.dart';
 
 final router = GoRouter(
@@ -23,10 +24,10 @@ final router = GoRouter(
           path: 'login',
           builder: (context, state) => const LoginScreen(),
         ),
-        // GoRoute(
-        //   path: 'register',
-        //   builder: (context, state) => const RegisterPage(),
-        // ),
+        GoRoute(
+          path: 'register',
+          builder: (context, state) => const RegisterScreen(),
+        ),
       ],
     ),
   ],
